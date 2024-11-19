@@ -1,0 +1,76 @@
+#include<Servo.h>
+Servo motor;
+void setup() {
+  motor.attach(3);
+}
+void loop() {  
+AbrirPuerta();
+CerrarPuerta();
+delay(5000);
+}
+void AbrirPuerta(){
+  digitalWrite(4,LOW);
+  digitalWrite(5,HIGH);
+  motor.write(9);
+  delay(500);
+  motor.write(20);
+  delay(500);
+  motor.write(30);
+  delay(500);
+   motor.write(40);
+  delay(500);
+    motor.write(50);
+  delay(500);
+  motor.write(60);
+  delay(500);
+  motor.write(70);
+  delay(500);
+  motor.write(80);
+  delay(500);
+  motor.write(90);
+  delay(500);
+  motor.write(100);
+  delay(500);
+    motor.write(110);
+  delay(500);
+    motor.write(120);
+  delay(500);
+  motor.write(130);
+  delay(500);
+
+  digitalWrite(4,HIGH);
+  digitalWrite(5,LOW);
+  delay(5000);
+}
+void CerrarPuerta(){
+  digitalWrite(4,LOW);
+  digitalWrite(5,HIGH);
+  motor.write(130);
+  delay(500);
+  motor.write(120);
+  delay(500);
+  motor.write(110);
+  delay(500);
+  motor.write(100);
+  delay(500);
+  motor.write(90);
+  delay(500);
+  motor.write(80);
+  delay(500);
+  motor.write(70);
+  delay(500);
+  motor.write(60);
+  delay(500);
+  motor.write(50);
+  delay(500);
+  motor.write(40);
+  delay(500);
+  motor.write(30);
+  delay(500);
+  motor.write(20);
+  delay(500);
+  motor.write(10);
+  delay(500);
+  digitalWrite(4,LOW);
+  digitalWrite(5,HIGH);
+  }
